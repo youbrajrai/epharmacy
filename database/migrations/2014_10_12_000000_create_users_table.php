@@ -20,7 +20,7 @@ class CreateUsersTable extends Migration
             $table->string('last_name');
        
             $table->string('mobile')->nullable();
-            $table->integer('user_type');
+            $table->boolean('is_admin')->nullable();
       
          
             $table->boolean('status')->default(1)->comment('0: Unrenewed 1: Active');
