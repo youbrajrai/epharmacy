@@ -29,4 +29,7 @@ class HomeController extends Controller
     {
         return view('admin.dashboard');
     }
+    public function pagenotfound(){
+        return view('error.pagenotfound');
+    }
 }
