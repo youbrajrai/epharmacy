@@ -9,7 +9,7 @@
           <div class="card-body">
             <!-- Logo -->
             <div class="app-brand justify-content-center">
-              <a href="index.html" class="app-brand-link gap-2">
+              <a href="route('front')" class="app-brand-link gap-2">
                 <span class="app-brand-logo demo">
                   <svg
                     width="25"
@@ -75,37 +75,21 @@
             <form id="formAuthentication" class="mb-3" method="POST" action="{{ route('register') }}">
               @csrf
               <div class="mb-3">
-                <label for="first_name" class="form-label">First Name</label>
+                <label for="name" class="form-label">Name</label>
                 <input
                   type="text"
-                  id="first_name"
-                  name="first_name"
-                  placeholder="Enter your First Name"
-                  class="form-control @error('first_name') is-invalid @enderror" value="{{ old('first_name') }}" required autocomplete="first_name"
+                  id="name"
+                  name="name"
+                  placeholder="Enter your Name"
+                  class="form-control @error('name') is-invalid @enderror" value="{{ old('name') }}" required autocomplete="name"
                   autofocus
                 />
-                @error('first_name')
+                @error('name')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
                 </span>
                 @enderror                
-              </div>
-              <div class="mb-3">
-                <label for="last_name" class="form-label">Last Name</label>
-                <input
-                  type="text"
-                  class="form-control @error('last_name') is-invalid @enderror" value="{{ old('last_name') }}" required autocomplete="last_name"
-                  id="last_name"
-                  name="last_name"
-                  placeholder="Enter your Last Name"
-                  autofocus
-                />
-                @error('last_name')
-                <span class="invalid-feedback" role="alert">
-                    <strong>{{ $message }}</strong>
-                </span>
-                @enderror                
-              </div>              
+              </div>             
               <div class="mb-3">
                 <label for="email" class="form-label">Email</label>
                 <input type="email" class="form-control @error('email') is-invalid @enderror" value="{{ old('email') }}" required autocomplete="email" id="email" name="email" placeholder="Enter your email" />
@@ -139,18 +123,24 @@
                 <label class="form-label" for="password">Confirm Password</label>
                 <div class="input-group input-group-merge">
                   <input id="password-confirm" type="password" class="form-control" name="password_confirmation" required autocomplete="new-password" aria-describedby="password">
+                  <span class="input-group-text cursor-pointer"><i class="bx bx-hide"></i></span>
                 </div>
               </div>              
 
-              <div class="mb-3">
+              {{-- <div class="mb-3">
                 <div class="form-check">
                   <input class="form-check-input" type="checkbox" id="terms-conditions" name="terms" />
                   <label class="form-check-label" for="terms-conditions">
                     I agree to
                     <a href="javascript:void(0);">privacy policy & terms</a>
                   </label>
-                </div>
-              </div>
+                  @error('terms')
+                  <span class="invalid-feedback" role="alert">
+                      <strong>{{ $message }}</strong>
+                  </span>
+                  @enderror                           
+                </div>               
+              </div> --}}
               <button class="btn btn-primary d-grid w-100">Sign up</button>
             </form>
 
@@ -177,12 +167,12 @@
                         @csrf
 
                         <div class="row mb-3">
-                            <label for="first_name" class="col-md-4 col-form-label text-md-end">{{ __('FirstName') }}</label>
+                            <label for="name" class="col-md-4 col-form-label text-md-end">{{ __('FirstName') }}</label>
 
                             <div class="col-md-6">
-                                <input id="first_name" type="text" class="form-control @error('first_name') is-invalid @enderror" name="first_name" value="{{ old('first_name') }}" required autocomplete="first_name" autofocus>
+                                <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
 
-                                @error('first_name')
+                                @error('name')
                                     <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>

@@ -135,6 +135,11 @@
                   </label>
                 </div>
               </div>
+              @if(session()->has('message'))
+              <div class="alert alert-danger">
+                  {{ session()->get('message') }}
+              </div>
+              @endif              
               <div class="mb-3">
                 <button class="btn btn-primary d-grid w-100" type="submit">{{ __('Login') }}</button>
               </div>

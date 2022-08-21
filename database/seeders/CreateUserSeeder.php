@@ -17,8 +17,7 @@ class CreateUserSeeder extends Seeder
         $users = [
             [
             // 'crm_user_name' => 'CRM Admin',
-            'first_name' => 'Admin First Name',
-            'last_name' => 'Admin Last Name',
+            'name' => 'Admin Name',
             // 'ae_number' =>  '123',
             // 'tlid' => '123',
             'mobile' => '981000000',
@@ -38,8 +37,7 @@ class CreateUserSeeder extends Seeder
             ],
             [
             // 'crm_user_name' => 'CRM test',
-            'first_name' => 'Test First Name',
-            'last_name' => 'Test Last Name',
+            'name' => 'Test Name',
             // 'ae_number' =>  '456',
             // 'tlid' => '456',
             'mobile' => '981000000',

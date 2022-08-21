@@ -16,11 +16,10 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->id('id');
         
-            $table->string('first_name')->nullable();
-            $table->string('last_name');
+            $table->string('name')->nullable();
        
             $table->string('mobile')->nullable();
-            $table->boolean('is_admin')->nullable();
+            $table->boolean('is_admin')->default(0)->comment('0: User 1: Admin');
       
          
             $table->boolean('status')->default(1)->comment('0: Unrenewed 1: Active');
@@ -33,6 +32,7 @@ class CreateUsersTable extends Migration
          
             $table->string('email');
             $table->string('password');
+            // $table->boolean('terms');
             $table->rememberToken();
             $table->timestamps();
         });
