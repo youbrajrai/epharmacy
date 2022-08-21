@@ -24,6 +24,7 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+        // above return is reverted 
         // return view('frontend.index');
     }
     public function adminHome()

@@ -9,6 +9,7 @@ Route::get('/', function () {
 
 Auth::routes();
 
+// the below lines are reverted to original stages, anish routes are deleted 
 Route::get('/home', [HomeController::class, 'index'])->name('home');
 Route::get('admin/dashboard', [HomeController::class, 'adminHome'])->name('admin.home');
 //error
