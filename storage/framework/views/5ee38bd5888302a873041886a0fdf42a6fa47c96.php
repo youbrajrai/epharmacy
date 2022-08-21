@@ -1,0 +1,3 @@
+<?php echo $__env->make('frontend.layouts.header', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?>
+<?php echo $__env->yieldContent('main-container'); ?>
+<?php echo $__env->make('frontend.layouts.footer', \Illuminate\Support\Arr::except(get_defined_vars(), ['__data', '__path']))->render(); ?><?php /**PATH /Users/anishmandal/Downloads/final_year_project/repo_qntm/youb_eshop/epharmacy/resources/views/frontend/layouts/main.blade.php ENDPATH**/ ?>
