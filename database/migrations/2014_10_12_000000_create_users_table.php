@@ -17,14 +17,9 @@ class CreateUsersTable extends Migration
             $table->id('id');
         
 
-            $table->string('name')->nullable();
-            $table->string('first_name')->nullable();
-            $table->string('last_name')->nullable();
-       
+            $table->string('name')->nullable();      
             $table->string('mobile')->nullable();
             $table->boolean('is_admin')->default(0)->comment('0: User 1: Admin');
-      
-         
             $table->boolean('status')->default(1)->comment('0: Unrenewed 1: Active');
             $table->string('work_phone')->nullable();
             $table->string('address_street')->nullable();
